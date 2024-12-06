@@ -1,0 +1,30 @@
+.input-model{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+.input-model > input{
+    width: 75%;
+}
+.input-model > label::after{
+    content: "*";
+     color: red;   
+}
+label[for="input-file"]{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    left: 0px;
+}
+figcaption::after{
+    content: "*";
+     color: red;   
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title></title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="text-center bg-primary text-white py-5">
+    
+      <h1 class="display-5">Employee management System  <i class="fa-solid fa-user-tie fa-l"></i></h1>
+    
+    
+    </header>
+<section class="my-5">
+  <div class="container">
+      <div class="row gy-4 ">
+        <div class="col-md-3 text-center text-md-start">
+          <button class="btn btn-success text-nowrap " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="fa-solid fa-user fa-fw"></i>
+            Create New Employee
+          </button>
+  </div>
+  <div class="offset-md-5 col-md-4">
+    <div class="input-group">
+      <input type="text" id="searchInput" class="form-control w-50" placeholder="Enter Your Search Keywords" disabled >
+<select name="" id="selectInput" class="form-select">
+  <option value="defult" hidden disabled selected>Search</option>
+  <option value="name">Name</option>
+  <option value="age">Age</option>
+  <option value="city">City</option>
+  <option value="email">Email</option>
+  <option value="phone">Phone</option>
+</select>
+
+    </div>
+
+  </div>
+
+      </div>
+  </div>
+</section>
+
+<section class=" table-responsive">
+<table class="table table-bordered text-center align-middle" >
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>picture</th>
+      <th>Name</th>
+      <th>Age</th>  
+      <th>City</th>  
+      <th>Email</th>  
+      <th>Phone</th>  
+      <th class="text-nowrap">Start Date</th>  
+      <th>Update</th>  
+      <th>Delete</th>  
+    </tr>
+  </thead>
+  <tbody id="table-body"></tbody>
+</table>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Employee Manager</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 position-relative">
+  <label for="input-file" class="position-absolute">
+    <i class="fa-solid fa-pen"></i>
+    <input type="file" id="input-file" hidden>
+  </label>
+ <figure>
+  <img src="https://placehold.co/350x350" alt="" id="image" class=" img-thumbnail">
+  <figcaption class="text-center fw-bold my-3">
+    Profile Picture
+   </figcaption>
+ </figure>
+
+  
+
+        </div>
+        <div class="col-md-8">
+<div class="input-model">
+  <label for="name" class="fw-bold">Name:  </label>
+    <input type="text" class="form-control" id="name">
+</div>
+<div class="input-model">
+  <label for="Age" class="fw-bold">Age:  </label>
+  <input type="text" class="form-control" id="Age">
+</div>
+<div class="input-model">
+  <label for="City" class="fw-bold">City:  </label>
+  <input type="text" class="form-control" id="City">
+</div>
+<div class="input-model">
+  <label for="Email" class="fw-bold">Email:  </label>
+  <input type="text" class="form-control" id="Email">
+</div>
+<div class="input-model">
+  <label for="Phone" class="fw-bold">Phone:  </label>
+  <input type="text" class="form-control" id="Phone">
+</div>
+<div class="input-model">
+  <label for="Start-Date" class="fw-bold">Start Date:  </label>
+  <input type="date" class="form-control" id="Start-Date">
+</div>
+
+ 
+</div>
+        </div>
+       </div>
+    </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" id="add" class="submitBtn btn btn-primary d-block">Add Employee</button>
+        <button type="button" id="Update" class=" btn btn-warning d-none">Update Employee</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
